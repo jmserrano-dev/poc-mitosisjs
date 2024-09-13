@@ -3,6 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "description": "Mitosis mono-repo template",
+  "scripts": {
+    "build": "npm run build:mitosis && npm run build:library:react && npm run build:library:angular",
+    "build:mitosis": "npm run build --workspace=@poc-mitosis/library",
+    "build:library:react": "npm run build --workspace=@poc-mitosis/library-react",
+    "build:library:angular": "npm run build --workspace=@poc-mitosis/library-angular",
+    "start:app:react": "npm run dev --workspace=@poc-mitosis/app-react",
+    "start:app:angular": "npm run start --workspace=@poc-mitosis/app-angular"
+  },
   "workspaces": [
     "apps/*",
     "library",

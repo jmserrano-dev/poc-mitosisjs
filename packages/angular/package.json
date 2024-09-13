@@ -4,6 +4,9 @@
   "scripts": {
     "build": "ng build"
   },
+  "files": [
+    "dist"
+  ],
   "peerDependencies": {
     "@angular/common": "^17.2.0",
     "@angular/core": "^17.2.0"

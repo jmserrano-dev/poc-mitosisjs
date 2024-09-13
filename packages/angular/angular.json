@@ -3,11 +3,10 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Button": {
+    "components": {
       "projectType": "library",
       "root": "",
       "sourceRoot": "src",
-      "prefix": "lab",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",

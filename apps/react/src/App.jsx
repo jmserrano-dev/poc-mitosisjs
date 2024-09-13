@@ -2,10 +2,10 @@ import { Button } from "@poc-mitosis/library-react";
 
 function App() {
   return (
-    <div>
-      <div>Components form MitosisJS</div>
-      <Button>Button</Button>
-    </div>
+    <main>
+      <h1>REACT - Components MitosisJS</h1>
+      <Button xClick={() => alert("Hello")}>Button</Button>
+    </main>
   );
 }
 
