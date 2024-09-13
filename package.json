@@ -1,0 +1,11 @@
+{
+  "name": "@poc-mitosis/mono-repo",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Mitosis mono-repo template",
+  "workspaces": [
+    "apps/*",
+    "library",
+    "packages/*"
+  ]
+}

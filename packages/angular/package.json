@@ -1,0 +1,19 @@
+{
+  "name": "@poc-mitosis/library-angular",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "ng build"
+  },
+  "peerDependencies": {
+    "@angular/common": "^17.2.0",
+    "@angular/core": "^17.2.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^17.2.2",
+    "@angular/cli": "^17.2.2",
+    "@angular/compiler": "^17.2.0",
+    "@angular/compiler-cli": "^17.2.0",
+    "ng-packagr": "^17.2.0",
+    "typescript": "~5.3.2"
+  }
+}
