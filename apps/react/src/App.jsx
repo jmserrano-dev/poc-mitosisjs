@@ -1,11 +1,10 @@
-import { AutoComplete, Todos } from '@poc-mitosis/library-react';
+import { Button } from "@poc-mitosis/library-react";
 
 function App() {
   return (
     <div>
-      <div>Welcome to React.</div>
-      <AutoComplete />
-      <Todos />
+      <div>Components form MitosisJS</div>
+      <Button>Button</Button>
     </div>
   );
 }

@@ -11,12 +11,12 @@
     "./*": "./output/*/src/index.js"
   },
   "dependencies": {
-    "@builder.io/eslint-plugin-mitosis": "^0.0.15",
-    "@builder.io/mitosis": "latest",
-    "@builder.io/mitosis-cli": "latest",
-    "eslint": "^8.51.0"
+    "@builder.io/eslint-plugin-mitosis": "0.0.16",
+    "@builder.io/mitosis": "0.4.3",
+    "@builder.io/mitosis-cli": "0.4.3"
   },
   "devDependencies": {
-    "watch": "^1.0.2"
+    "eslint": "9.10.0",
+    "watch": "^0.13.0"
   }
 }
