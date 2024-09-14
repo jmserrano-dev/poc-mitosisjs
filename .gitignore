@@ -118,14 +118,8 @@ yarn-error.log
 coverage
 
 ############################
-# Strapi
+# Frameworks
 ############################
 
-.env
-license.txt
-exports
-.strapi
+.angular
 dist
-build
-.strapi-updater.json
-.strapi-cloud.json

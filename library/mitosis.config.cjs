@@ -1,3 +1,5 @@
+const injectCssPlugin = require("./plugins/inject-css.cjs");
+
 /**
  * @type {import('@builder.io/mitosis').MitosisConfig}
  */
@@ -7,6 +9,7 @@ module.exports = {
   dest: "../packages",
   commonOptions: {
     typescript: true,
+    plugins: [injectCssPlugin("src/components")],
   },
   options: {
     react: {

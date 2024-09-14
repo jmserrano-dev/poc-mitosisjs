@@ -4,15 +4,15 @@
   font-weight: 500;
   color: #333333;
   background-color: transparent;
-  border: "1px solid #333333";
+  border: 1px solid #333333;
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .x-button:hover {
-  color: "#ffffff";
-  background-color: "#333333";
+  color: #ffffff;
+  background-color: var(--my-color, #333333);
 }
 
 .x-button:focus {

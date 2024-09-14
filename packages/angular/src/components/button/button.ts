@@ -1,9 +1,8 @@
 import { Output, EventEmitter, Component, Input } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
-import { ButtonProps, ButtonState } from "./button.model";
 import { cls } from "../../utils/styles";
-import { ClickEvent } from "../../shared/click-event.props";
+import { ButtonProps, ButtonState } from "./button.model";
 
 @Component({
   selector: "x-button",
@@ -11,7 +10,7 @@ import { ClickEvent } from "../../shared/click-event.props";
     <button
       [attr.id]="id"
       [attr.type]="type"
-      [class]="cls('x-button', className)"
+      [class]='cls("x-button", className)'
       (click)="handleClick()"
     >
       <ng-content></ng-content>
@@ -58,7 +57,6 @@ export default class Button {
   @Output() xClick = new EventEmitter();
 
   handleClick() {
-    console.log("handleClick");
     if (this.xClick) this.xClick.emit();
   }
 }
