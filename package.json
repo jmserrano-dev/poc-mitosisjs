@@ -6,7 +6,8 @@
   "workspaces": [
     "apps/*",
     "mitosis/library",
-    "mitosis/packages/*"
+    "mitosis/packages/*",
+    "stencil/library"
   ],
   "scripts": {
     "apps:dev:react": "npm run dev --workspace=@poc-mitosis/app-react",
