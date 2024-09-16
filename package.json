@@ -3,20 +3,17 @@
   "version": "0.0.0",
   "private": true,
   "description": "Mitosis mono-repo template",
-  "scripts": {
-    "dev:app:react": "npm run dev --workspace=@poc-mitosis/app-react",
-    "dev:app:angular": "npm run start --workspace=@poc-mitosis/app-angular",
-    "dev:library:mitosis": "npm run dev --workspace=@poc-mitosis/library",
-    "dev:library:react": "npm run dev --workspace=@poc-mitosis/library-react",
-    "dev:library:angular": "npm run dev --workspace=@poc-mitosis/library-angular",
-    "build:library": "npm run build:library:mitosis && npm run build:library:react && npm run build:library:angular",
-    "build:library:mitosis": "npm run build --workspace=@poc-mitosis/library",
-    "build:library:react": "npm run build --workspace=@poc-mitosis/library-react",
-    "build:library:angular": "npm run build --workspace=@poc-mitosis/library-angular"
-  },
   "workspaces": [
     "apps/*",
-    "library",
-    "packages/*"
-  ]
+    "mitosis/library",
+    "mitosis/packages/*"
+  ],
+  "scripts": {
+    "apps:dev:react": "npm run dev --workspace=@poc-mitosis/app-react",
+    "apps:dev:angular": "npm run start --workspace=@poc-mitosis/app-angular",
+    "mitosis:build:library": "npm run mitosis:build:library:mitosis && npm run mitosis:build:library:react && npm run mitosis:build:library:angular",
+    "mitosis:build:library:mitosis": "npm run build --workspace=@poc-mitosis/library",
+    "mitosis:build:library:react": "npm run build --workspace=@poc-mitosis/library-react",
+    "mitosis:build:library:angular": "npm run build --workspace=@poc-mitosis/library-angular"
+  }
 }
