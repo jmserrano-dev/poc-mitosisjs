@@ -4,10 +4,11 @@
   "files": [
     "dist"
   ],
+  "types": "./dist/index.d.ts",
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.mjs.js",
   "scripts": {
-    "dev": "vite",
+    "dev": "watch \"npm run build\" ./src",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -27,6 +28,9 @@
     "globals": "15.9.0",
     "typescript": "5.5.3",
     "typescript-eslint": "8.5.0",
-    "vite": "5.4.5"
+    "vite": "5.4.5",
+    "vite-plugin-dts": "4.2.1",
+    "vite-plugin-static-copy": "1.0.6",
+    "watch": "^0.13.0"
   }
 }

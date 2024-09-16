@@ -23,6 +23,8 @@ export default function Button(props: ButtonProps) {
       class={cls("x-button", props.className)}
       onClick={() => state.handleClick()}
     >
+      <span>Hello</span>
+      <img src={"/assets/circle-heat-svgrepo-com.svg"} />
       {props.children}
     </button>
   );

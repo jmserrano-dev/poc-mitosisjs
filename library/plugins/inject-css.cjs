@@ -17,6 +17,7 @@ function injectCssPlugin(basePath) {
           const cssContent = fs.readFileSync(importCssPath, "utf8");
           definition.style = cssContent;
         }
+
         return definition;
       },
     },
