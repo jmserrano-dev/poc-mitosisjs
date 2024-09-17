@@ -16,21 +16,13 @@ export const config: Config = {
       generateTypeDeclarations: true,
     },
     reactOutputTarget({
-      outDir: '../packages/react/src/components/',
+      outDir: '../packages/react/src/auto-generated/',
     }),
     angularOutputTarget({
       outputType: 'standalone',
       componentCorePackage: '@poc-stencil/library',
-      directivesProxyFile: '../packages/angular/src/components/components.ts',
-      // directivesArrayFile: '../packages/angular/src/index.ts',
+      directivesProxyFile: '../packages/angular/src/auto-generated/components.ts',
     }),
-    // {
-    //   type: 'www',
-    //   serviceWorker: null, // disable service workers
-    // },
-    // {
-    //   type: 'docs-readme',
-    // },
   ],
   testing: {
     browserHeadless: 'new',
