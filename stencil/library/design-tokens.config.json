@@ -1,0 +1,18 @@
+{
+    "source": [
+      "design-tokens/**/*.tokens.json"
+    ],
+    "platforms": {
+      "css": {
+        "transformGroup": "css",
+        "prefix": "st",
+        "buildPath": "src/assets/css/",
+        "files": [
+          {
+            "destination": "_variables.css",
+            "format": "css/variables"
+          }
+        ]
+      }
+    }
+  }

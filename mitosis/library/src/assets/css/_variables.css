@@ -1,0 +1,20 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --mt-card-border-radius-mobile: 0;
+  --mt-card-border-radius-desktop: 8px;
+  --mt-card-heading-color: #FF0000;
+  --mt-card-text-color: #111111;
+  --mt-color-base-gray-light: #CCCCCC;
+  --mt-color-base-gray-medium: #999999;
+  --mt-color-base-gray-dark: #111111;
+  --mt-color-base-red: #FF0000;
+  --mt-color-base-green: #00FF00;
+  --mt-color-font-base: #FF0000;
+  --mt-color-font-secondary: #00FF00;
+  --mt-color-font-tertiary: #111111;
+  --mt-radii-none: 0;
+  --mt-radii-sm: 8px;
+}
