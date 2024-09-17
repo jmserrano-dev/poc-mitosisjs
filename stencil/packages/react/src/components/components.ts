@@ -7,17 +7,17 @@
 
 /* eslint-disable */
 
-import { MyComponent as MyComponentElement, defineCustomElement as defineMyComponent } from "@poc-stencil/library/dist/components/my-component.js";
-import type { StencilReactComponent } from '@stencil/react-output-target/runtime';
+import { StButton as StButtonElement, defineCustomElement as defineStButton } from "@poc-stencil/library/dist/components/st-button.js";
+import type { EventName, StencilReactComponent } from '@stencil/react-output-target/runtime';
 import { createComponent } from '@stencil/react-output-target/runtime';
 import React from 'react';
 
-type MyComponentEvents = NonNullable<unknown>;
+type StButtonEvents = { onClicked: EventName<CustomEvent<any>> };
 
-export const MyComponent: StencilReactComponent<MyComponentElement, MyComponentEvents> = /*@__PURE__*/ createComponent<MyComponentElement, MyComponentEvents>({
-    tagName: 'my-component',
-    elementClass: MyComponentElement,
+export const StButton: StencilReactComponent<StButtonElement, StButtonEvents> = /*@__PURE__*/ createComponent<StButtonElement, StButtonEvents>({
+    tagName: 'st-button',
+    elementClass: StButtonElement,
     react: React,
-    events: {} as MyComponentEvents,
-    defineCustomElement: defineMyComponent
+    events: { onClicked: 'clicked' } as StButtonEvents,
+    defineCustomElement: defineStButton
 });

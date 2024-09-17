@@ -1,16 +1,22 @@
 import { Button } from "@poc-mitosis/library-react";
-import { MyComponent } from "@poc-stencil/library-react";
+import { StButton, defineCustomElements } from "@poc-stencil/library-react";
+
+defineCustomElements();
 
 function App() {
+  const handleClick = () => {
+    alert("Hello");
+  };
+
   return (
     <main>
       <h1>REACT - Components</h1>
 
       <h2>MitosisJS</h2>
-      <Button xClick={() => alert("Hello")}>Button</Button>
+      <Button xClick={handleClick}>MitosisJS Button</Button>
 
       <h2>StencilJS</h2>
-      <MyComponent first="John" middle="James" last="Doe" />
+      <StButton onClick={handleClick}>StencilJS Button</StButton>
     </main>
   );
 }

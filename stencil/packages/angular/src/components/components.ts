@@ -1,33 +1,37 @@
 /* tslint:disable */
 /* auto-generated angular directive proxies */
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, NgZone } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, EventEmitter, NgZone } from '@angular/core';
 
-import { ProxyCmp } from './angular-component-lib/utils';
+import { ProxyCmp, proxyOutputs } from './angular-component-lib/utils';
 
 import type { Components } from '@poc-stencil/library/components';
 
-import { defineCustomElement as defineMyComponent } from '@poc-stencil/library/components/my-component.js';
+import { defineCustomElement as defineStButton } from '@poc-stencil/library/components/st-button.js';
 @ProxyCmp({
-  defineCustomElementFn: defineMyComponent,
-  inputs: ['first', 'last', 'middle']
+  defineCustomElementFn: defineStButton,
+  inputs: ['cssClasses', 'type']
 })
 @Component({
-  selector: 'my-component',
+  selector: 'st-button',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['first', 'last', 'middle'],
+  inputs: ['cssClasses', 'type'],
   standalone: true
 })
-export class MyComponent {
+export class StButton {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['clicked']);
   }
 }
 
 
-export declare interface MyComponent extends Components.MyComponent {}
+export declare interface StButton extends Components.StButton {
+
+  clicked: EventEmitter<CustomEvent<any>>;
+}
 
 

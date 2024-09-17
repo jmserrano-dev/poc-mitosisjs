@@ -1,3 +1,1 @@
-import { MyComponent } from "./components/components";
-
-export { MyComponent };
+export * from "./components/components";

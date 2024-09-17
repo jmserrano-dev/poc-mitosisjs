@@ -20,11 +20,10 @@ export default function Button(props: ButtonProps) {
     <button
       id={props.id}
       type={props.type}
-      class={cls("x-button", props.className)}
+      class={cls("mt-button", props.className)}
       onClick={() => state.handleClick()}
     >
-      <span>Hello</span>
-      <img src={"/assets/circle-heat-svgrepo-com.svg"} />
+      {/* <img src={"/assets/circle-heat-svgrepo-com.svg"} /> */}
       {props.children}
     </button>
   );

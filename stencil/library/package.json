@@ -38,13 +38,17 @@
       "import": "./dist/components/index.js",
       "types": "./dist/components/index.d.ts"
     },
-    "./components/my-component.js": {
-      "import": "./dist/components/my-component.js",
-      "types": "./dist/components/my-component.d.ts"
+    "./components/st-button.js": {
+      "import": "./dist/components/st-button.js",
+      "types": "./dist/components/st-button.d.ts"
     },
-    "./dist/components/my-component.js": {
-      "import": "./dist/components/my-component.js",
-      "types": "./dist/components/my-component.d.ts"
+    "./dist/components/st-button.js": {
+      "import": "./dist/components/st-button.js",
+      "types": "./dist/components/st-button.d.ts"
+    },
+    "./loader": {
+      "import": "./loader/index.js",
+      "types": "./loader/index.d.ts"
     }
   }
 }

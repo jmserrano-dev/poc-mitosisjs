@@ -10,11 +10,9 @@ import { ButtonProps, ButtonState } from "./button.model";
     <button
       [attr.id]="id"
       [attr.type]="type"
-      [class]='cls("x-button", className)'
+      [class]='cls("mt-button", className)'
       (click)="handleClick()"
     >
-      <span>Hello</span>
-      <img src="/assets/circle-heat-svgrepo-com.svg" />
       <ng-content></ng-content>
     </button>
   `,
@@ -23,7 +21,7 @@ import { ButtonProps, ButtonState } from "./button.model";
       :host {
         display: contents;
       }
-      .x-button {
+      .mt-button {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -56,16 +54,6 @@ import { ButtonProps, ButtonState } from "./button.model";
           width: 30px;
         }
       }
-
-      /* .x-button:hover {
-          color: #ffffff;
-          background-color: var(--my-color, #333333);
-        }
-
-        .x-button:focus {
-          outline: none;
-          box-shadow: 0 0 0 2px rgba(51, 51, 51, 0.2);
-        } */
     `,
   ],
   standalone: true,

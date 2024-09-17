@@ -6,9 +6,14 @@ export const config: Config = {
   namespace: 'library',
   outputTargets: [
     {
+      type: 'dist',
+      esmLoaderPath: '../loader',
+    },
+    {
       type: 'dist-custom-elements',
       customElementsExportBehavior: 'single-export-module',
       externalRuntime: false,
+      generateTypeDeclarations: true,
     },
     reactOutputTarget({
       outDir: '../packages/react/src/components/',
@@ -25,10 +30,6 @@ export const config: Config = {
     // },
     // {
     //   type: 'docs-readme',
-    // },
-    // {
-    //   type: 'dist',
-    //   esmLoaderPath: '../loader',
     // },
   ],
   testing: {

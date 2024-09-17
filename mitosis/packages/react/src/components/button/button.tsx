@@ -13,15 +13,13 @@ function Button(props: ButtonProps) {
       <button
         id={props.id}
         type={props.type}
-        className={cls("x-button", props.className)}
+        className={cls("mt-button", props.className)}
         onClick={(event) => handleClick()}
       >
-        <span>Hello</span>
-        <img src="/assets/circle-heat-svgrepo-com.svg" />
         {props.children}
       </button>
 
-      <style>{`.x-button {
+      <style>{`.mt-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,16 +52,6 @@ function Button(props: ButtonProps) {
     width: 30px;
   }
 }
-
-/* .x-button:hover {
-  color: #ffffff;
-  background-color: var(--my-color, #333333);
-}
-
-.x-button:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(51, 51, 51, 0.2);
-} */
 
 `}</style>
     </>
