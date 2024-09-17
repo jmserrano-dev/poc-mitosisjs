@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@poc-mitosis/library-react": "*",
+    "@poc-stencil/library-react": "*",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   },

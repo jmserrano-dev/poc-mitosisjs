@@ -7,7 +7,8 @@
     "apps/*",
     "mitosis/library",
     "mitosis/packages/*",
-    "stencil/library"
+    "stencil/library",
+    "stencil/packages/*"
   ],
   "scripts": {
     "apps:dev:react": "npm run dev --workspace=@poc-mitosis/app-react",
@@ -15,6 +16,9 @@
     "mitosis:build:library": "npm run mitosis:build:library:mitosis && npm run mitosis:build:library:react && npm run mitosis:build:library:angular",
     "mitosis:build:library:mitosis": "npm run build --workspace=@poc-mitosis/library",
     "mitosis:build:library:react": "npm run build --workspace=@poc-mitosis/library-react",
-    "mitosis:build:library:angular": "npm run build --workspace=@poc-mitosis/library-angular"
+    "mitosis:build:library:angular": "npm run build --workspace=@poc-mitosis/library-angular",
+    "stencil:build:library": "npm run stencil:build:library:stencil && npm run stencil:build:library:react",
+    "stencil:build:library:stencil": "npm run build --workspace=@poc-stencil/library",
+    "stencil:build:library:react": "npm run build --workspace=@poc-stencil/library-react"
   }
 }
