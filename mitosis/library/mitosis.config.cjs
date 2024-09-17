@@ -1,6 +1,14 @@
 const injectCssPlugin = require("./plugins/inject-css.cjs");
 const copyAssetsPlugin = require("./plugins/copy-assets.cjs");
 
+const getTargetPath = ({ target }) => {
+  return `../packages/${target}/src/auto-generated`;
+};
+
+const getTargetAssetsPath = ({ target }) => {
+  return getTargetPath({ target }) + "/assets";
+};
+
 /**
  * @type {import('@builder.io/mitosis').MitosisConfig}
  */
@@ -8,6 +16,7 @@ module.exports = {
   files: "src/**",
   targets: ["react", "angular"],
   dest: "../packages",
+  getTargetPath,
   commonOptions: {
     typescript: true,
     plugins: [injectCssPlugin("src/components")],
@@ -18,7 +27,7 @@ module.exports = {
       plugins: [
         copyAssetsPlugin({
           source: "./src/assets",
-          destination: "../packages/react/src/assets",
+          destination: getTargetAssetsPath({ target: "react" }),
         }),
       ],
     },
@@ -27,7 +36,7 @@ module.exports = {
       plugins: [
         copyAssetsPlugin({
           source: "./src/assets",
-          destination: "../packages/angular/src/assets",
+          destination: getTargetAssetsPath({ target: "angular" }),
         }),
       ],
     },
