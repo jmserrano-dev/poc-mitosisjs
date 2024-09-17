@@ -10,6 +10,8 @@
   },
   "private": true,
   "dependencies": {
+    "@poc-stencil/library": "*",
+    "@poc-stencil/library-angular": "*",
     "@poc-mitosis/library-angular": "*",
     "@angular/animations": "^17.2.0",
     "@angular/common": "^17.2.0",

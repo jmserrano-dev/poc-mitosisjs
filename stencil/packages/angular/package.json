@@ -1,0 +1,25 @@
+{
+  "name": "@poc-stencil/library-angular",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "watch \"npm run build\" ./src",
+    "build": "ng build"
+  },
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "@poc-stencil/library": "*",
+    "@angular/common": "^17.2.0",
+    "@angular/core": "^17.2.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^17.2.2",
+    "@angular/cli": "^17.2.2",
+    "@angular/compiler": "^17.2.0",
+    "@angular/compiler-cli": "^17.2.0",
+    "ng-packagr": "^17.2.0",
+    "typescript": "~5.3.2",
+    "watch": "^0.13.0"
+  }
+}

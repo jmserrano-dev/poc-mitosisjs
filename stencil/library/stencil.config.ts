@@ -1,28 +1,34 @@
 import { Config } from '@stencil/core';
 import { reactOutputTarget } from '@stencil/react-output-target';
+import { angularOutputTarget } from '@stencil/angular-output-target';
 
 export const config: Config = {
   namespace: 'library',
   outputTargets: [
     {
-      type: 'docs-readme',
-    },
-    {
-      type: 'dist',
-      esmLoaderPath: '../loader',
-    },
-    {
       type: 'dist-custom-elements',
-      customElementsExportBehavior: 'auto-define-custom-elements',
+      customElementsExportBehavior: 'single-export-module',
       externalRuntime: false,
     },
     reactOutputTarget({
-      // Relative path to where the React components will be generated
       outDir: '../packages/react/src/components/',
+    }),
+    angularOutputTarget({
+      outputType: 'standalone',
+      componentCorePackage: '@poc-stencil/library',
+      directivesProxyFile: '../packages/angular/src/components/components.ts',
+      // directivesArrayFile: '../packages/angular/src/index.ts',
     }),
     // {
     //   type: 'www',
     //   serviceWorker: null, // disable service workers
+    // },
+    // {
+    //   type: 'docs-readme',
+    // },
+    // {
+    //   type: 'dist',
+    //   esmLoaderPath: '../loader',
     // },
   ],
   testing: {
