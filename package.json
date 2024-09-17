@@ -20,6 +20,13 @@
     "stencil:build:library": "npm run stencil:build:library:stencil && npm run stencil:build:library:react && npm run stencil:build:library:angular",
     "stencil:build:library:stencil": "npm run build --workspace=@poc-stencil/library",
     "stencil:build:library:react": "npm run build --workspace=@poc-stencil/library-react",
-    "stencil:build:library:angular": "npm run build --workspace=@poc-stencil/library-angular"
+    "stencil:build:library:angular": "npm run build --workspace=@poc-stencil/library-angular",
+    "lint": "biome lint ./",
+    "lint:fix": "biome lint --write ./",
+    "format": "biome format ./",
+    "format:fix": "biome format --write ./"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.1"
   }
 }

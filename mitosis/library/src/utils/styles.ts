@@ -1,7 +1,4 @@
-export type ClassNameArg =
-  | string
-  | { [key: string]: boolean | undefined }
-  | undefined;
+export type ClassNameArg = string | { [key: string]: boolean | undefined } | undefined;
 
 export const cls = (...args: ClassNameArg[]) => {
   let result = "";
@@ -11,7 +8,7 @@ export const cls = (...args: ClassNameArg[]) => {
       if (typeof arg === "string") {
         result += `${arg} `;
       } else {
-        for (let key in arg) {
+        for (const key in arg) {
           if (arg[key]) {
             result += `${key} `;
           }

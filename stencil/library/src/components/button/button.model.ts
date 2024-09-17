@@ -1,7 +1,7 @@
-import { GlobalProps } from '../../shared/global.props';
-import { ClickEventProps } from '../../shared/click-event.props';
+import { GlobalProps } from "../../shared/global.props";
+import { ClickEventProps } from "../../shared/click-event.props";
 
-export const ButtonTypeList = ['button', 'reset', 'submit'] as const;
+export const ButtonTypeList = ["button", "reset", "submit"] as const;
 
 export type ButtonTypeType = (typeof ButtonTypeList)[number];
 

@@ -1,4 +1,4 @@
-import { EventEmitter } from '@stencil/core';
+import { EventEmitter } from "@stencil/core";
 
 export type ClickEvent<T = MouseEvent> = Partial<T>;
 

@@ -18,7 +18,6 @@ export class Button {
         type={this.type}
         class={cls('st-button', this.cssClasses)}
         onClick={event => {
-          console.log('[STENCIL] CLICK', { event });
           this.clicked.emit(event);
         }}
       >

@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "biomejs.biome",
+    "usernamehw.errorlens",
+    "esbenp.prettier-vscode",
+    "editorconfig.editorconfig",
+    "pflannery.vscode-versionlens"
+  ]
+}

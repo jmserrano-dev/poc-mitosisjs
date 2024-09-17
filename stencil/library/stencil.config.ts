@@ -1,30 +1,30 @@
-import { Config } from '@stencil/core';
-import { reactOutputTarget } from '@stencil/react-output-target';
-import { angularOutputTarget } from '@stencil/angular-output-target';
+import { Config } from "@stencil/core";
+import { reactOutputTarget } from "@stencil/react-output-target";
+import { angularOutputTarget } from "@stencil/angular-output-target";
 
 export const config: Config = {
-  namespace: 'library',
+  namespace: "library",
   outputTargets: [
     {
-      type: 'dist',
-      esmLoaderPath: '../loader',
+      type: "dist",
+      esmLoaderPath: "../loader",
     },
     {
-      type: 'dist-custom-elements',
-      customElementsExportBehavior: 'single-export-module',
+      type: "dist-custom-elements",
+      customElementsExportBehavior: "single-export-module",
       externalRuntime: false,
       generateTypeDeclarations: true,
     },
     reactOutputTarget({
-      outDir: '../packages/react/src/auto-generated/',
+      outDir: "../packages/react/src/auto-generated/",
     }),
     angularOutputTarget({
-      outputType: 'standalone',
-      componentCorePackage: '@poc-stencil/library',
-      directivesProxyFile: '../packages/angular/src/auto-generated/components.ts',
+      outputType: "standalone",
+      componentCorePackage: "@poc-stencil/library",
+      directivesProxyFile: "../packages/angular/src/auto-generated/components.ts",
     }),
   ],
   testing: {
-    browserHeadless: 'new',
+    browserHeadless: "new",
   },
 };
