@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "watch \"npm run build\" ./src",
-    "build": "ng build"
+    "build": "ng build",
+    "storybook": "ng run components:storybook",
+    "build-storybook": "ng run components:build-storybook"
   },
   "files": [
     "dist"
@@ -17,7 +19,18 @@
     "@angular/cli": "^17.2.2",
     "@angular/compiler": "^17.2.0",
     "@angular/compiler-cli": "^17.2.0",
+    "@compodoc/compodoc": "^1.1.25",
+    "@storybook/addon-docs": "^7.6.17",
+    "@storybook/addon-essentials": "^7.6.17",
+    "@storybook/addon-interactions": "^7.6.17",
+    "@storybook/addon-links": "^7.6.17",
+    "@storybook/angular": "^7.6.17",
+    "@storybook/blocks": "^7.6.17",
+    "@storybook/test": "^7.6.17",
     "ng-packagr": "^17.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "storybook": "^7.6.17",
     "typescript": "~5.3.2",
     "watch": "^0.13.0"
   }
