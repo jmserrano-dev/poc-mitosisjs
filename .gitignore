@@ -125,3 +125,4 @@ coverage
 dist
 
 auto-generated
+*storybook.log

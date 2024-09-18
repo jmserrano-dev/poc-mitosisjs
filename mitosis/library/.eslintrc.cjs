@@ -3,10 +3,7 @@ module.exports = {
     browser: true,
   },
   plugins: ['@builder.io/mitosis'],
-  extends: [
-    // Use this approach for our recommended rules configuration
-    'plugin:@builder.io/mitosis/recommended',
-  ],
+  extends: ['plugin:@builder.io/mitosis/recommended', 'plugin:storybook/recommended'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2018,
