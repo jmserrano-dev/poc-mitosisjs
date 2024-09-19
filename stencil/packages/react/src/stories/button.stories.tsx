@@ -1,4 +1,4 @@
-import { fn } from "@storybook/test";
+// import { fn } from "@storybook/test";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { StButton } from "../index";
@@ -10,7 +10,7 @@ const meta = {
     layout: "centered",
   },
   args: {
-    onClicked: fn(),
+    // onClicked: fn(),
   },
 } satisfies Meta<typeof StButton>;
 

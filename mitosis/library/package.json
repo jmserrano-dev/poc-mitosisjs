@@ -2,8 +2,8 @@
   "name": "@poc-mitosis/library",
   "private": true,
   "scripts": {
-    "dev": "watch \"npm run build\" ./src",
-    "prebuild": "npm run build:design-tokens",
+    "predev": "npm run build:design-tokens",
+    "dev": "watch \"npm run build\" ./src --ignoreDirectoryPattern=**/assets/**",
     "build": "mitosis build --c mitosis.config.cjs",
     "lint": "eslint",
     "build:design-tokens": "style-dictionary build --config design-tokens.config.json"

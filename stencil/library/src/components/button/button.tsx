@@ -1,4 +1,4 @@
-import { Component, Prop, h, Event } from '@stencil/core';
+import { Component, Prop, h } from '@stencil/core';
 import { cls } from '../../utils/styles';
 import { ButtonProps } from './button.model';
 
@@ -8,20 +8,28 @@ import { ButtonProps } from './button.model';
   shadow: true,
 })
 export class Button {
-  @Prop() type: ButtonProps['type'];
-  @Prop() cssClasses: ButtonProps['cssClasses'];
-  @Event() clicked: ButtonProps['clicked'];
+  @Prop() type: ButtonProps['type'] = 'button';
+  @Prop() variant: ButtonProps['variant'] = 'primary';
+  @Prop() status: ButtonProps['status'] = 'default';
+  @Prop() shadow: ButtonProps['shadow'] = 'on';
+  @Prop() size: ButtonProps['size'] = 'M';
 
   render() {
     return (
       <button
         type={this.type}
-        class={cls('st-button', this.cssClasses)}
-        onClick={event => {
-          this.clicked.emit(event);
-        }}
+        class={cls('st-button', {
+          'st-button--primary': this.variant === 'primary',
+          'st-button--secondary': this.variant === 'secondary',
+          'st-button--disabled': this.status === 'disabled',
+          'st-button--shadow-on': this.shadow === 'on',
+          'st-button--size-m': this.size === 'M',
+          'st-button--size-s': this.size === 'S',
+        })}
+        // onClick={event => {
+        //   this.clicked.emit(event);
+        // }}
       >
-        {/* <img src={'/assets/circle-heat-svgrepo-com.svg'} /> */}
         <slot />
       </button>
     );

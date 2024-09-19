@@ -1,14 +1,17 @@
-import { GlobalProps } from "../../shared/global.props";
-import { ClickEventProps } from "../../shared/click-event.props";
+export const ButtonTypeList = ["button", "submit", "reset"] as const;
+export const ButtonVariantList = ["primary", "secondary"] as const;
+export const ButtonStatusList = ["default", "disabled"] as const;
+export const ButtonShadowList = ["on", "off"] as const;
+export const ButtonSizeList = ["M", "S"] as const;
 
-export const ButtonTypeList = ["button", "reset", "submit"] as const;
-
-export type ButtonTypeType = (typeof ButtonTypeList)[number];
-
-export type ButtonProps = GlobalProps &
-  ClickEventProps & {
-    type?: ButtonTypeType;
-  };
+export type ButtonProps = {
+  type?: (typeof ButtonTypeList)[number];
+  variant?: (typeof ButtonVariantList)[number];
+  status?: (typeof ButtonStatusList)[number];
+  shadow?: (typeof ButtonShadowList)[number];
+  size?: (typeof ButtonSizeList)[number];
+  // children?: any;
+};
 
 export type ButtonState = {
   handleClick: (/*event: ClickEvent<HTMLButtonElement>*/) => void;

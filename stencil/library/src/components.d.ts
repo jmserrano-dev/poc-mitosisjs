@@ -9,27 +9,15 @@ import { ButtonProps } from "./components/button/button.model";
 export { ButtonProps } from "./components/button/button.model";
 export namespace Components {
     interface StButton {
-        "cssClasses": ButtonProps['cssClasses'];
+        "shadow": ButtonProps['shadow'];
+        "size": ButtonProps['size'];
+        "status": ButtonProps['status'];
         "type": ButtonProps['type'];
+        "variant": ButtonProps['variant'];
     }
-}
-export interface StButtonCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLStButtonElement;
 }
 declare global {
-    interface HTMLStButtonElementEventMap {
-        "clicked": any;
-    }
     interface HTMLStButtonElement extends Components.StButton, HTMLStencilElement {
-        addEventListener<K extends keyof HTMLStButtonElementEventMap>(type: K, listener: (this: HTMLStButtonElement, ev: StButtonCustomEvent<HTMLStButtonElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
-        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
-        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
-        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
-        removeEventListener<K extends keyof HTMLStButtonElementEventMap>(type: K, listener: (this: HTMLStButtonElement, ev: StButtonCustomEvent<HTMLStButtonElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
-        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
-        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
-        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLStButtonElement: {
         prototype: HTMLStButtonElement;
@@ -41,9 +29,11 @@ declare global {
 }
 declare namespace LocalJSX {
     interface StButton {
-        "cssClasses"?: ButtonProps['cssClasses'];
-        "onClicked"?: (event: StButtonCustomEvent<any>) => void;
+        "shadow"?: ButtonProps['shadow'];
+        "size"?: ButtonProps['size'];
+        "status"?: ButtonProps['status'];
         "type"?: ButtonProps['type'];
+        "variant"?: ButtonProps['variant'];
     }
     interface IntrinsicElements {
         "st-button": StButton;
