@@ -12,13 +12,34 @@ A Component...
 
 - ...should be **cross-libraries** but the code should be written once
 - ...should be **accessible**
-- ...should be tree-shakable
+- ...should be **tree-shakable**
 - ...should be compatible with **StoryBook**
 - ...should be easy to create new **variants**
 - ...should make use of **figma tokens**
 - ...should provide some **optional themes** to make it easy to use
 - ...should be **documented**
 - ...should be easy to **extend** it by means of customised components per framework
+
+## 🏗️ Project structure
+
+```shell
+.
+├── apps
+│   ├── angular      # Showcase app for Angular
+│   ├── react        # Showcase app for React
+├── mitosis
+│   ├── library      # Mitosis library
+│   ├── packages
+│   │   ├── angular  # Mitosis package for Angular
+│   │   ├── react    # Mitosis package for React
+├── stencil
+│   ├── library      # Stencil library
+│   ├── packages
+│   │   ├── angular  # Stencil package for Angular
+│   │   ├── react    # Stencil package for React
+├── package.json
+├── README.md
+```
 
 ## 🚀 Platforms supported
 
@@ -34,19 +55,6 @@ A Component...
     </td>
   </tr>
 </table>
-
-## 📦 Packages
-
-This repository is organized into the following packages:
-
-- `mitosis/library`: The Mitosis library package
-- `mitosis/packages/*`: The Mitosis package for each framework
-  - `mitosis/packages/react`: The React package
-  - `mitosis/packages/angular`: The Angular package
-- `stencil/library`: The Stencil library package
-- `stencil/packages/*`: The Stencil package for each framework
-  - `stencil/packages/react`: The React package
-  - `stencil/packages/angular`: The Angular package
 
 ## 📚 Components
 
@@ -148,14 +156,31 @@ This repository is organized into the following packages:
 
 ## 💻 How to start develop / contribute
 
+```shell
+# Install packages
+$ npm install
+
+# Run mitosis in dev mode
+$ npm run mitosis:dev:library
+$ npm run mitosis:storybook:react
+$ npm run mitosis:storybook:angular
+
+# Run stencil in dev mode
+$ npm run stencil:dev:library
+$ npm run stencil:storybook:react
+$ npm run stencil:storybook:angular
+```
+
 ## Resources
 
-- [Example - Mitosis UI Papanasi](https://github.dev/CKGrafico/papanasi)
-- [Example - Mitosis UI Mono](https://github.com/db-ui/mono)
-- [Article - Create components with Mitosis](https://medium.com/@abhishekjha1993/create-a-reusable-component-library-for-angular-react-and-vue-using-mitosis-and-builder-io-d9f58580cb56)
-- [Article - Create componentes with Mitosis](https://betterprogramming.pub/write-components-once-compile-to-every-framework-with-mitosis-9330411d21e4)
-- [Mitosis Playground](https://mitosis.builder.io/playground)
 - [Mitosis Docs](https://mitosis.builder.io/docs)
 - [Stencil Docs](https://stenciljs.com/docs)
+- [Article - Create components with Mitosis](https://medium.com/@abhishekjha1993/create-a-reusable-component-library-for-angular-react-and-vue-using-mitosis-and-builder-io-d9f58580cb56)
+- [Article - Create componentes with Mitosis](https://betterprogramming.pub/write-components-once-compile-to-every-framework-with-mitosis-9330411d21e4)
+- [Example - Mitosis UI Papanasi](https://github.dev/CKGrafico/papanasi)
+- [Example - Mitosis UI Mono](https://github.com/db-ui/mono)
+- [Mitosis Playground](https://mitosis.builder.io/playground)
+- [W3C - Tokens design](https://tr.designtokens.org/format)
+- [Style Dictionary](https://styledictionary.com)
 - [Badges](https://shields.io)
 - [Icon badges](https://simpleicons.org)
