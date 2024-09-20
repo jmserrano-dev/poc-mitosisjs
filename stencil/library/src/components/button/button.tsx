@@ -1,5 +1,4 @@
 import { Component, Prop, h } from '@stencil/core';
-import { cls } from '../../utils/styles';
 import { ButtonProps } from './button.model';
 
 @Component({
@@ -18,14 +17,15 @@ export class Button {
     return (
       <button
         type={this.type}
-        class={cls('st-button', {
+        class={{
+          'st-button': true,
           'st-button--primary': this.variant === 'primary',
           'st-button--secondary': this.variant === 'secondary',
           'st-button--disabled': this.status === 'disabled',
           'st-button--shadow-on': this.shadow === 'on',
           'st-button--size-m': this.size === 'M',
           'st-button--size-s': this.size === 'S',
-        })}
+        }}
         // onClick={event => {
         //   this.clicked.emit(event);
         // }}
