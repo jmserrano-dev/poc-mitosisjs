@@ -1,7 +1,7 @@
 import { useDefaultProps, useMetadata } from "@builder.io/mitosis";
 
-import { cls } from "../../utils/styles";
 import { ButtonProps } from "./button.model";
+import { cls } from "../../utils/styles";
 
 useMetadata({
   importCSS: "./button.css",
@@ -9,14 +9,15 @@ useMetadata({
   angular: { selector: "x-button" },
 });
 
+useDefaultProps<ButtonProps>({
+  type: "button",
+  variant: "primary",
+  status: "default",
+  shadow: "on",
+  size: "M",
+});
+
 export default function Button(props: ButtonProps) {
-  useDefaultProps({
-    type: "button",
-    variant: "primary",
-    status: "default",
-    shadow: "on",
-    size: "M",
-  });
   // const state = useStore<ButtonState>({
   //   handleClick: () => {
   //     if (props.xClick) props.xClick();
@@ -40,3 +41,15 @@ export default function Button(props: ButtonProps) {
     </button>
   );
 }
+
+// const input = '@Input() type!: ButtonProps["type"] = defaultProps["type"]';
+// const regex = /(\w+)!/g;
+// const result = input.replace(regex, '$1');
+
+// console.log(result);
+
+// const input = 'const defaultProps =';
+// const regex = /(defaultProps)/g;
+// const result = input.replace(regex, `defaultProps : ButtonProps`);
+
+// console.log(result);

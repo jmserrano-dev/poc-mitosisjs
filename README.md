@@ -184,3 +184,4 @@ $ npm run stencil:storybook:angular
 - [Style Dictionary](https://styledictionary.com)
 - [Badges](https://shields.io)
 - [Icon badges](https://simpleicons.org)
+- [Storybook - Testing](https://storybook.js.org/docs/writing-tests)

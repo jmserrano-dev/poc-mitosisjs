@@ -1,0 +1,92 @@
+{
+  "Elevations": {
+    "XL": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "offsetX": "0px",
+          "offsetY": "32px",
+          "blur": "48px",
+          "spread": "0px",
+          "color": "#2d2d330d"
+        },
+        {
+          "offsetX": "0px",
+          "offsetY": "12px",
+          "blur": "16px",
+          "spread": "0px",
+          "color": "#2d2d3314"
+        }
+      ]
+    },
+    "L": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "offsetX": "0px",
+          "offsetY": "12px",
+          "blur": "24px",
+          "spread": "0px",
+          "color": "#2d2d3314"
+        },
+        {
+          "offsetX": "0px",
+          "offsetY": "8px",
+          "blur": "16px",
+          "spread": "0px",
+          "color": "#2d2d3314"
+        }
+      ]
+    },
+    "M": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "offsetX": "0px",
+          "offsetY": "4px",
+          "blur": "8px",
+          "spread": "0px",
+          "color": "#2d2d3329"
+        }
+      ]
+    },
+    "S": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "offsetX": "0px",
+          "offsetY": "2px",
+          "blur": "6px",
+          "spread": "0px",
+          "color": "#2d2d333d"
+        }
+      ]
+    }
+  },
+  "Buttons": {
+    "M": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "offsetX": "0px",
+          "offsetY": "4px",
+          "blur": "8px",
+          "spread": "0px",
+          "color": "#2d2d3329"
+        }
+      ]
+    },
+    "S": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "offsetX": "0px",
+          "offsetY": "2px",
+          "blur": "6px",
+          "spread": "0px",
+          "color": "#2d2d333d"
+        }
+      ]
+    }
+  }
+}

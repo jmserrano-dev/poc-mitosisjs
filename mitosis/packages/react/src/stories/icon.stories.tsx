@@ -1,24 +1,21 @@
-import { fn } from "@storybook/test";
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Button } from "../index";
+import { Icon } from "../index";
 
 const meta = {
-  title: "Example/Button",
+  title: "Example/Icon",
   tags: ["autodocs"],
-  component: Button,
+  component: Icon,
   parameters: {
     layout: "centered",
   },
-  args: {
-    // xClick: fn(),
-  },
-} as Meta<typeof Button>;
+  args: {},
+} as Meta<typeof Icon>;
 
 export default meta;
 
 export const Primary: StoryObj<typeof meta> = {
   args: {
-    children: "Hello",
+    name: "arrow_down",
   },
 };

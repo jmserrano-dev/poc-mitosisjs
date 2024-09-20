@@ -1,6 +1,6 @@
 {
     "source": [
-      "design-tokens/**/*.tokens.json"
+      "design-tokens/*.tokens.json"
     ],
     "platforms": {
       "css": {

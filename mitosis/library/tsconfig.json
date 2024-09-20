@@ -5,7 +5,8 @@
     "jsx": "preserve",
     "noImplicitAny": false,
     "moduleResolution": "node",
-    "jsxImportSource": "@builder.io/mitosis"
+    "jsxImportSource": "@builder.io/mitosis",
+    "resolveJsonModule": true
   },
   "include": ["src"]
 }

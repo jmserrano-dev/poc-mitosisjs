@@ -4,6 +4,8 @@ export const ButtonStatusList = ["default", "disabled"] as const;
 export const ButtonShadowList = ["on", "off"] as const;
 export const ButtonSizeList = ["M", "S"] as const;
 
+type AllowString<T> = T | (string & {});
+
 export type ButtonProps = {
   type?: (typeof ButtonTypeList)[number];
   variant?: (typeof ButtonVariantList)[number];

@@ -1,16 +1,14 @@
 {
   "name": "@poc-mitosis/library",
   "private": true,
+  "type": "module",
   "scripts": {
-    "predev": "npm run build:design-tokens",
+    "predev": "npm run build:tokens",
     "dev": "watch \"npm run build\" ./src --ignoreDirectoryPattern=**/assets/**",
     "build": "mitosis build --c mitosis.config.cjs",
     "lint": "eslint",
-    "build:design-tokens": "style-dictionary build --config design-tokens.config.json"
-  },
-  "type": "module",
-  "exports": {
-    "./*": "./output/*/src/index.js"
+    "build:tokens": "style-dictionary build --config ./design-tokens.config.json",
+    "build:icons": "fantasticon ./src/assets/icons -o ./src/assets/fonts/icons/ -n icons-font --font-types ttf --tag span --asset-types json css ts --normalize --font-height 500"
   },
   "dependencies": {
     "@builder.io/eslint-plugin-mitosis": "0.0.16",
@@ -19,7 +17,11 @@
   },
   "devDependencies": {
     "eslint": "9.10.0",
+    "@twbs/fantasticon": "3.0.0",
     "style-dictionary": "4.1.1",
     "watch": "^0.13.0"
+  },
+  "exports": {
+    "./*": "./output/*/src/index.js"
   }
 }
