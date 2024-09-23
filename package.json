@@ -11,6 +11,7 @@
     "stencil/packages/*"
   ],
   "scripts": {
+    "postinstall": "patch-package",
     "apps:dev:react": "npm run dev --workspace=@poc-mitosis/app-react",
     "apps:dev:angular": "npm run start --workspace=@poc-mitosis/app-angular",
     "mitosis:dev:library": "npm run dev --workspace=@poc-mitosis/library",
@@ -33,6 +34,7 @@
     "format:fix": "biome format --write ./"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.2"
+    "@biomejs/biome": "1.9.2",
+    "patch-package": "8.0.0"
   }
 }

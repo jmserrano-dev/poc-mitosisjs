@@ -1,0 +1,21 @@
+diff --git a/node_modules/@builder.io/mitosis/dist/src/generators/angular/index.js b/node_modules/@builder.io/mitosis/dist/src/generators/angular/index.js
+index 6df4d61..dbb5851 100644
+--- a/node_modules/@builder.io/mitosis/dist/src/generators/angular/index.js
++++ b/node_modules/@builder.io/mitosis/dist/src/generators/angular/index.js
+@@ -794,7 +794,7 @@ const componentToAngular = (userOptions = {}) => ({ component: _component }) =>
+             return `${prop}: ${value}`;
+         })
+             .join(',');
+-        return `const defaultProps = {${defalutPropsString}};\n`;
++        return `const defaultProps: ${json.propsTypeRef} = {${defalutPropsString}};\n`;
+     };
+     const hasConstructor = Boolean(injectables.length) || dynamicComponents.size || refsForObjSpread.size;
+     const angularCoreImports = [
+@@ -840,6 +840,7 @@ const componentToAngular = (userOptions = {}) => ({ component: _component }) =>
+         const propType = propsTypeRef ? `${propsTypeRef}["${item}"]` : 'any';
+         let propDeclaration = `@Input() ${item}${options.typescript ? `!: ${propType}` : ''}`;
+         if (json.defaultProps && json.defaultProps.hasOwnProperty(item)) {
++            propDeclaration = propDeclaration.replace("!", "");
+             propDeclaration += ` = defaultProps["${item}"]`;
+         }
+         return propDeclaration;
