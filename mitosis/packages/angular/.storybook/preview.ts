@@ -1,4 +1,7 @@
 import type { Preview } from "@storybook/angular";
+
+import "../src/auto-generated/assets/css/global.css";
+
 import { setCompodocJson } from "@storybook/addon-docs/angular";
 import docJson from "../documentation.json";
 setCompodocJson(docJson);

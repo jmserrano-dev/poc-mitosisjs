@@ -1,10 +1,9 @@
-import { fn } from "@storybook/test";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Button } from "../index";
 
 const meta = {
-  title: "Example/Button",
+  title: "Components/Button",
   tags: ["autodocs"],
   component: Button,
   parameters: {
