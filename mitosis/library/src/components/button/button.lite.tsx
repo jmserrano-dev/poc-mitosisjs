@@ -41,15 +41,3 @@ export default function Button(props: ButtonProps) {
     </button>
   );
 }
-
-// const input = '@Input() type!: ButtonProps["type"] = defaultProps["type"]';
-// const regex = /(\w+)!/g;
-// const result = input.replace(regex, '$1');
-
-// console.log(result);
-
-// const input = 'const defaultProps =';
-// const regex = /(defaultProps)/g;
-// const result = input.replace(regex, `defaultProps : ButtonProps`);
-
-// console.log(result);
