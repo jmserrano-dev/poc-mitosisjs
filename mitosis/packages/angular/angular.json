@@ -26,13 +26,9 @@
             "configDir": ".storybook",
             "browserTarget": "components:build",
             "compodoc": true,
-            "compodocArgs": [
-              "-e",
-              "json",
-              "-d",
-              "."
-            ],
-            "port": 6006
+            "compodocArgs": ["-e", "json", "-d", "."],
+            "port": 6006,
+            "styles": ["src/auto-generated/assets/css/global.css"]
           }
         },
         "build-storybook": {
@@ -41,12 +37,7 @@
             "configDir": ".storybook",
             "browserTarget": "components:build",
             "compodoc": true,
-            "compodocArgs": [
-              "-e",
-              "json",
-              "-d",
-              "."
-            ],
+            "compodocArgs": ["-e", "json", "-d", "."],
             "outputDir": "storybook-static"
           }
         }

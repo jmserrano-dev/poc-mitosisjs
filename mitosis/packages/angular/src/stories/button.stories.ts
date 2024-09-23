@@ -31,5 +31,6 @@ const meta: Meta<Button & { content: string }> = {
 export default meta;
 
 export const Primary: StoryObj<Button & { content: string }> = {
-  args: {},
+  args: {
+  },
 };
