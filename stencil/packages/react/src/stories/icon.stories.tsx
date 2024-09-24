@@ -1,12 +1,11 @@
-// import { fn } from "@storybook/test";
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { StButton } from "../index";
+import { StIcon } from "../index";
 
-const meta: Meta<typeof StButton> = {
-  title: "Components/Button",
+const meta: Meta<typeof StIcon> = {
+  title: "Components/Icon",
   // tags: ["!autodocs"],
-  component: StButton,
+  component: StIcon,
   parameters: {
     layout: "centered",
   },
@@ -17,7 +16,6 @@ export default meta;
 
 export const Primary: StoryObj<typeof meta> = {
   args: {
-    type: "button",
-    children: "Hello",
+    name: "arrow_down",
   },
 };

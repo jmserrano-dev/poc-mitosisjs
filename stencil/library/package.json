@@ -17,24 +17,27 @@
     "loader/"
   ],
   "scripts": {
-    "predev": "npm run build:design-tokens",
+    "predev": "npm run build:tokens",
     "dev": "watch \"npm run build\" ./src --ignoreDirectoryPattern=**/assets/**",
     "build": "stencil build",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
-    "build:design-tokens": "style-dictionary build --config design-tokens.config.json"
+    "build:tokens": "style-dictionary build --config ./design-tokens.config.json",
+    "build:icons": "fantasticon ./src/assets/icons -o ./src/assets/fonts/icons/ -n icons-font --font-types ttf --tag span --asset-types json css ts --normalize --font-height 500"
   },
   "devDependencies": {
     "@stencil/angular-output-target": "0.9.0",
     "@stencil/core": "^4.7.0",
     "@stencil/react-output-target": "0.7.1",
+    "@twbs/fantasticon": "3.0.0",
     "@types/jest": "^29.5.6",
     "@types/node": "^16.18.11",
     "jest": "^29.7.0",
     "jest-cli": "^29.7.0",
     "puppeteer": "^21.9.0",
+    "rollup-plugin-copy": "3.5.0",
     "style-dictionary": "4.1.1",
     "watch": "^0.13.0"
   },
@@ -51,9 +54,21 @@
       "import": "./dist/components/st-button.js",
       "types": "./dist/components/st-button.d.ts"
     },
+    "./components/st-icon.js": {
+      "import": "./dist/components/st-icon.js",
+      "types": "./dist/components/st-icon.d.ts"
+    },
+    "./dist/components/st-icon.js": {
+      "import": "./dist/components/st-icon.js",
+      "types": "./dist/components/st-icon.d.ts"
+    },
     "./loader": {
       "import": "./loader/index.js",
       "types": "./loader/index.d.ts"
+    },
+    "./global.css": {
+      "import": "./dist/assets/css/global.css",
+      "require": "./dist/assets/css/global.css"
     }
   }
 }

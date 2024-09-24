@@ -1,0 +1,29 @@
+@font-face {
+  font-display: block;
+  font-family: "icons-font";
+  src: url("./icons-font.ttf?22d8d410d4a9b43298416049dd5903e5") format("truetype");
+}
+
+span[class^="icon-"]::before, span[class*=" icon-"]::before {
+  font-family: icons-font !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow_down::before {
+  content: "\f101";
+}
+.icon-arrow_left::before {
+  content: "\f102";
+}
+.icon-arrow_right::before {
+  content: "\f103";
+}
+.icon-arrow_up::before {
+  content: "\f104";
+}

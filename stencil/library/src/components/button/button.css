@@ -17,59 +17,60 @@
   box-shadow: var(--button-shadow, none);
 
   cursor: pointer;
-}
 
-.st-button--primary {
-  --button-color: #ffffff;
-  --button-background: #0071e5;
+  &.st-button--primary {
+    --button-color: #ffffff;
+    --button-background: #0071e5;
 
-  &:hover,
-  &:focus {
-    --button-background: #3195fc;
+    &:hover,
+    &:focus {
+      --button-background: #3195fc;
+    }
+
+    &:active {
+      --button-background: #005ebf;
+    }
   }
 
-  &:active {
-    --button-background: #005ebf;
+  &.st-button--secondary {
+    --button-color: #0071e5;
+    --button-background: #ffffff;
+    --button-border: 2px solid #eaeaea;
+
+    &:hover,
+    &:focus {
+      --button-color: #3195fc;
+    }
+
+    &:active {
+      --button-color: #005ebf;
+      --button-border: 2px solid #ababad;
+    }
+
+    &.st-button--shadow-on {
+      &:active {
+        --button-border: none;
+      }
+    }
   }
-}
 
-.st-button--secondary {
-  --button-color: #0071e5;
-  --button-background: #ffffff;
-  --button-border: 2px solid #eaeaea;
-
-  &:hover,
-  &:focus {
-    --button-color: #3195fc;
+  &.st-button--size-m {
+    font-size: var(--Size-md, 16px);
+    padding: var(--Spacing-spacing-2, 8px) var(--Spacing-spacing-4, 16px);
   }
 
-  &:active {
-    --button-color: #005ebf;
-    --button-border: 2px solid #ababad;
+  &.st-button--size-s {
+    font-size: var(--Size-sm, 14px);
+    padding: var(--Spacing-spacing-1, 4px) var(--Spacing-spacing-2, 8px);
+  }
+
+  &.st-button--disabled {
+    opacity: 0.4;
+    pointer-events: none;
   }
 
   &.st-button--shadow-on {
-    &:active {
-      --button-border: none;
-    }
+    --button-border: none;
+    --button-shadow: 0px 2px 6px 0px rgba(45, 45, 51, 0.24);
   }
-}
-
-.st-button--size-m {
-  font-size: var(--Size-md, 16px);
-  padding: var(--Spacing-spacing-2, 8px) var(--Spacing-spacing-4, 16px);
-}
-
-.st-button--size-s {
-  font-size: var(--Size-sm, 14px);
-  padding: var(--Spacing-spacing-1, 4px) var(--Spacing-spacing-2, 8px);
-}
-
-.st-button--disabled {
-  opacity: 0.4;
-}
-
-.st-button--shadow-on {
-  --button-border: none;
-  --button-shadow: 0px 2px 6px 0px rgba(45, 45, 51, 0.24);
 }

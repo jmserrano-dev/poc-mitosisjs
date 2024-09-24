@@ -6,7 +6,9 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { ButtonProps } from "./components/button/button.model";
+import { IconProps } from "./components/icon/icon.model";
 export { ButtonProps } from "./components/button/button.model";
+export { IconProps } from "./components/icon/icon.model";
 export namespace Components {
     interface StButton {
         "shadow": ButtonProps['shadow'];
@@ -14,6 +16,10 @@ export namespace Components {
         "status": ButtonProps['status'];
         "type": ButtonProps['type'];
         "variant": ButtonProps['variant'];
+    }
+    interface StIcon {
+        "name": IconProps['name'];
+        "size"?: IconProps['size'];
     }
 }
 declare global {
@@ -23,8 +29,15 @@ declare global {
         prototype: HTMLStButtonElement;
         new (): HTMLStButtonElement;
     };
+    interface HTMLStIconElement extends Components.StIcon, HTMLStencilElement {
+    }
+    var HTMLStIconElement: {
+        prototype: HTMLStIconElement;
+        new (): HTMLStIconElement;
+    };
     interface HTMLElementTagNameMap {
         "st-button": HTMLStButtonElement;
+        "st-icon": HTMLStIconElement;
     }
 }
 declare namespace LocalJSX {
@@ -35,8 +48,13 @@ declare namespace LocalJSX {
         "type"?: ButtonProps['type'];
         "variant"?: ButtonProps['variant'];
     }
+    interface StIcon {
+        "name": IconProps['name'];
+        "size"?: IconProps['size'];
+    }
     interface IntrinsicElements {
         "st-button": StButton;
+        "st-icon": StIcon;
     }
 }
 export { LocalJSX as JSX };
@@ -44,6 +62,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "st-button": LocalJSX.StButton & JSXBase.HTMLAttributes<HTMLStButtonElement>;
+            "st-icon": LocalJSX.StIcon & JSXBase.HTMLAttributes<HTMLStIconElement>;
         }
     }
 }

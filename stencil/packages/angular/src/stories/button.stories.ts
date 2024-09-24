@@ -16,7 +16,7 @@ const meta: Meta<StButton & { content: string }> = {
     },
   },
   args: {
-    content: "My button",
+    content: "Button",
   },
   render: (args: StButton) => ({
     props: { ...args },

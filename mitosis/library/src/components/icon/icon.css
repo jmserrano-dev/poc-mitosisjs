@@ -1,0 +1,15 @@
+.mt-icon {
+  display: contents;
+
+  &.mt-icon--size-s {
+    font-size: 16px;
+  }
+
+  &.mt-icon--size-m {
+    font-size: 24px;
+  }
+
+  &.mt-icon--size-l {
+    font-size: 32px;
+  }
+}

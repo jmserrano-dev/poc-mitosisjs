@@ -66,6 +66,7 @@
 
   &.mt-button--disabled {
     opacity: 0.4;
+    pointer-events: none;
   }
 
   &.mt-button--shadow-on {

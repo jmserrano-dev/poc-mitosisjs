@@ -11,7 +11,7 @@ export class Button {
   @Prop() variant: ButtonProps['variant'] = 'primary';
   @Prop() status: ButtonProps['status'] = 'default';
   @Prop() shadow: ButtonProps['shadow'] = 'on';
-  @Prop() size: ButtonProps['size'] = 'M';
+  @Prop() size: ButtonProps['size'] = 'm';
 
   render() {
     return (
@@ -23,8 +23,8 @@ export class Button {
           'st-button--secondary': this.variant === 'secondary',
           'st-button--disabled': this.status === 'disabled',
           'st-button--shadow-on': this.shadow === 'on',
-          'st-button--size-m': this.size === 'M',
-          'st-button--size-s': this.size === 'S',
+          'st-button--size-s': this.size === 's',
+          'st-button--size-m': this.size === 'm',
         }}
         // onClick={event => {
         //   this.clicked.emit(event);

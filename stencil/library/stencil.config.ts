@@ -1,4 +1,5 @@
 import { Config } from "@stencil/core";
+import copy from "rollup-plugin-copy";
 import { reactOutputTarget } from "@stencil/react-output-target";
 import { angularOutputTarget } from "@stencil/angular-output-target";
 
@@ -26,5 +27,20 @@ export const config: Config = {
   ],
   testing: {
     browserHeadless: "new",
+  },
+  // globalStyle: "src/assets/css/global.css",
+  rollupPlugins: {
+    after: [
+      copy({
+        verbose: true,
+        copySync: true,
+        targets: [
+          {
+            src: "src/assets",
+            dest: "dist",
+          },
+        ],
+      }),
+    ],
   },
 };

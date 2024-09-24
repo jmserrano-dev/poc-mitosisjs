@@ -59,7 +59,8 @@ A Component...
 ## 📚 Components
 
 - ✅ Button
-- 🔳 Icon
+- ✅ Icon
+- 🔳 ...
 
 ## 🥊 Mitosis vs Stencil
 
