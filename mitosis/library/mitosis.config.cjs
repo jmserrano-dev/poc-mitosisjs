@@ -14,6 +14,7 @@ const getTargetAssetsPath = ({ target }) => {
  */
 module.exports = {
   files: "src/**",
+  exclude: ["src/assets"],
   targets: ["react", "angular"],
   dest: "../packages",
   getTargetPath,
