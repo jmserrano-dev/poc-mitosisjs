@@ -60,7 +60,23 @@ A Component...
 
 - ✅ Button
 - ✅ Icon
-- 🔳 ...
+- ✅ Label
+- ✅ Validation
+- 🔳 Layouts
+  - ✅ Box
+  - ✅ Grid
+  - ✅ Stack
+  - ✅ Cluster
+  - ✅ Imposter
+  - 🔳 Reel
+- 🔳 Input text
+- 🔳 Input radio
+- 🔳 Input checkbox
+- 🔳 Input select
+- 🔳 Foundations
+  - 🔳 Global types
+  - ✅ Global fonts
+  - 🔳 Global tokens
 
 ## 🥊 Mitosis vs Stencil
 

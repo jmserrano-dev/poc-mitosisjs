@@ -1,0 +1,15 @@
+.mt-validation {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 4px;
+
+  color: var(--mt-color-text-error, #ee4614);
+
+  & .mt-validation__message {
+    font-size: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

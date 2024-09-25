@@ -1,0 +1,15 @@
+.mt-grid-layout {
+  display: grid;
+  align-content: start;
+  grid-template-columns: 100%;
+  grid-gap: var(--mt-grid-layout-spacing, 8px);
+}
+
+@supports (width: min(var(--mt-grid-layout-min, 0), 100%)) {
+  .mt-grid-layout {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(min(var(--mt-grid-layout-min, 0), 100%), 1fr)
+    );
+  }
+}

@@ -1,0 +1,22 @@
+.mt-imposter-layout {
+  position: absolute;
+  padding: var(--mt-imposter-layout-spacing, 8px);
+
+  &.mt-imposter-layout--center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &.mt-imposter-layout--left {
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+
+  &.mt-imposter-layout--right {
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+}

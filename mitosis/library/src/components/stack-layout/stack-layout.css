@@ -1,0 +1,6 @@
+.mt-stack-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--mt-stack-layout-spacing, 8px);
+}

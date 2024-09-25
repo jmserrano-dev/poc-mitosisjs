@@ -1,0 +1,57 @@
+@import "../../fonts/icons/icons-font.css";
+
+@font-face {
+  font-family: "Lato";
+  src: url("../../fonts/Lato/lato-light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../../fonts/Lato/lato-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../../fonts/Lato/lato-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../../fonts/Lato/lato-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Heebo";
+  src: url("../../fonts/Heebo/heebo-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Heebo";
+  src: url("../../fonts/Heebo/heebo-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Heebo";
+  src: url("../../fonts/Heebo/heebo-bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Heebo";
+  src: url("../../fonts/Heebo/heebo-black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}

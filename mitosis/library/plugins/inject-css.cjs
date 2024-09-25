@@ -1,11 +1,26 @@
 const fs = require("fs");
 const path = require("path");
 
+function pascalToKebab(name) {
+  return name
+    .split('')
+    .map((letter, index) => {
+      if (index === 0) {
+        return letter.toLowerCase();
+      }
+      if (letter.toUpperCase() === letter) {
+        return `-${letter.toLowerCase()}`;
+      }
+      return letter;
+    })
+    .join('');
+}
+
 function injectCssPlugin(basePath) {
   return () => ({
     json: {
       pre(definition) {
-        const componentName = definition.name.toLowerCase();
+        const componentName = pascalToKebab(definition.name);
 
         const importCssLocalPath = path.basename(
           definition.meta?.useMetadata?.importCSS

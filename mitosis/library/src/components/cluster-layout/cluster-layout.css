@@ -1,0 +1,7 @@
+.mt-cluster-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: var(--mt-cluster-layout-justify, "start");
+  gap: var(--mt-cluster-layout-spacing, 8px);
+}

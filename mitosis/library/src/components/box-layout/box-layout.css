@@ -1,0 +1,4 @@
+.mt-box-layout {
+  display: block;
+  padding: var(--mt-box-layout-spacing, 8px);
+}

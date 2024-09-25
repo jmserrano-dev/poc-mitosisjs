@@ -1,5 +1,9 @@
 export type ClassNameArg = string | { [key: string]: boolean | undefined } | undefined;
 
+export const toPx = (value?: number) => {
+  return `${value}px`;
+};
+
 export const cls = (...args: ClassNameArg[]) => {
   let result = "";
 

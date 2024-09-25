@@ -1,2 +1,10 @@
-@import "./_variables.css";
-@import "../fonts/icons/icons-font.css";
+@import "./1-settings/_design-tokens.css";
+@import "./1-settings/_fonts.css";
+
+@import "./2-generic/_reset.css";
+@import "./2-generic//_box-sizing.css";
+@import "./2-generic/_scroll.css";
+@import "./2-generic/_selection.css";
+
+@import "./3-utils/_utils.css";
+@import "./3-utils/_test.css";

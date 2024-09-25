@@ -1,0 +1,9 @@
+::-moz-selection {
+  color: var(--mt-color-text-white) !important;
+  background: var(--mt-primary-palette-primary) !important;
+}
+
+::selection {
+  color: var(--mt-color-text-white) !important;
+  background: var(--mt-primary-palette-primary) !important;
+}

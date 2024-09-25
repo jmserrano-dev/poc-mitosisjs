@@ -1,0 +1,12 @@
+.layout__box--test {
+  border: 5px solid black;
+  background: white;
+  min-width: 140px;
+}
+
+.layout__box--imposter {
+  border: 5px solid red;
+  background: white;
+  min-width: 150px;
+  min-height: 80px;
+}
