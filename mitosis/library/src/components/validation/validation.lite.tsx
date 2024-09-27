@@ -12,7 +12,7 @@ useMetadata({
 export default function Validation(props: ValidationProps) {
   return (
     <span class="mt-validation">
-      <Icon name="arrow_right" size="s" />
+      <Icon name="alert-circle" size="s" />
       <em class="mt-validation__message">{props.children}</em>
     </span>
   );

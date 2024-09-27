@@ -13,7 +13,7 @@ useDefaultProps<ButtonProps>({
   type: "button",
   variant: "primary",
   status: "default",
-  shadow: "on",
+  shadow: false,
   size: "m",
 });
 
@@ -31,9 +31,9 @@ export default function Button(props: ButtonProps) {
         "mt-button--primary": props.variant === "primary",
         "mt-button--secondary": props.variant === "secondary",
         "mt-button--disabled": props.status === "disabled",
-        "mt-button--shadow-on": props.shadow === "on",
         "mt-button--size-s": props.size === "s",
         "mt-button--size-m": props.size === "m",
+        "mt-button--shadow": props.shadow,
       })}
       // onClick={() => state.handleClick()}
     >

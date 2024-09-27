@@ -7,7 +7,8 @@
   color: var(--mt-color-text-error, #ee4614);
 
   & .mt-validation__message {
-    font-size: 12px;
+    font: normal normal var(--mt-bodytext-xs-regular);
+
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;

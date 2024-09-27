@@ -1,5 +1,5 @@
 .mt-icon {
-  display: contents;
+  display: flex;
 
   &.mt-icon--size-s {
     font-size: 16px;

@@ -4,7 +4,7 @@
     "css": {
       "transformGroup": "css",
       "prefix": "mt",
-      "buildPath": "src/assets/css/1-settings",
+      "buildPath": "src/assets/css/1-settings/",
       "files": [
         {
           "destination": "_design-tokens.css",

@@ -1,7 +1,7 @@
 @font-face {
   font-display: block;
   font-family: "icons-font";
-  src: url("./icons-font.ttf?22d8d410d4a9b43298416049dd5903e5") format("truetype");
+  src: url("./icons-font.ttf?dcf71aba37a3a7cebfd67d58ad90b8f9") format("truetype");
 }
 
 span[class^="icon-"]::before, span[class*=" icon-"]::before {
@@ -15,15 +15,21 @@ span[class^="icon-"]::before, span[class*=" icon-"]::before {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow_down::before {
+.icon-alert-circle::before {
   content: "\f101";
 }
-.icon-arrow_left::before {
+.icon-arrow-down::before {
   content: "\f102";
 }
-.icon-arrow_right::before {
+.icon-arrow-left::before {
   content: "\f103";
 }
-.icon-arrow_up::before {
+.icon-arrow-right::before {
   content: "\f104";
+}
+.icon-arrow-up::before {
+  content: "\f105";
+}
+.icon-close-sm::before {
+  content: "\f106";
 }

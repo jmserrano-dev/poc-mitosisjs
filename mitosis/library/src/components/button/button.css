@@ -2,66 +2,66 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--Spacing-spacing-1, 4px);
+  gap: var(--mt-spacing-spacing-1, 4px);
   box-sizing: border-box;
 
-  font-size: var(--Size-md, 16px);
+  font: normal normal var(--mt-button-m);
+
+  /* 
+  font-size: var(--mt-size-md, 16px);
   font-style: normal;
-  font-weight: 400;
-  color: var(--button-color, #ffffff);
+  font-weight: 400; */
 
   outline: none;
-  border: var(--button-border, none);
-  border-radius: var(--Radius-radius-md, 8px);
-  background: var(--button-background, #0071e5);
-  box-shadow: var(--button-shadow, none);
+  border: 2px solid;
+  border-radius: var(--mt-radius-radius-md, 8px);
 
   cursor: pointer;
 
   &.mt-button--primary {
-    --button-color: #ffffff;
-    --button-background: #0071e5;
+    color: #ffffff;
+    background-color: #0071e5;
 
     &:hover,
     &:focus {
-      --button-background: #3195fc;
+      background-color: #3195fc;
     }
 
     &:active {
-      --button-background: #005ebf;
+      background-color: #005ebf;
     }
   }
 
   &.mt-button--secondary {
-    --button-color: #0071e5;
-    --button-background: #ffffff;
-    --button-border: 2px solid #eaeaea;
+    color: #0071e5;
+    background-color: #ffffff;
+    border-color: #eaeaea;
 
     &:hover,
     &:focus {
-      --button-color: #3195fc;
+      color: #3195fc;
     }
 
     &:active {
-      --button-color: #005ebf;
-      --button-border: 2px solid #ababad;
+      color: #005ebf;
+      border-color: #ababad;
     }
 
-    &.mt-button--shadow-on {
+    &.mt-button--shadow {
       &:active {
-        --button-border: none;
+        border: none;
       }
     }
   }
 
   &.mt-button--size-m {
-    font-size: var(--Size-md, 16px);
-    padding: var(--Spacing-spacing-2, 8px) var(--Spacing-spacing-4, 16px);
+    font-size: var(--mt-size-md, 16px);
+    padding: var(--mt-spacing-spacing-2, 8px) var(--Spacing-spacing-4, 16px);
   }
 
   &.mt-button--size-s {
-    font-size: var(--Size-sm, 14px);
-    padding: var(--Spacing-spacing-1, 4px) var(--Spacing-spacing-2, 8px);
+    font-size: var(--mt-size-sm, 14px);
+    padding: var(--mt-spacing-spacing-1, 4px) var(--mt-spacing-spacing-2, 8px);
   }
 
   &.mt-button--disabled {
@@ -69,8 +69,13 @@
     pointer-events: none;
   }
 
-  &.mt-button--shadow-on {
-    --button-border: none;
-    --button-shadow: 0px 2px 6px 0px rgba(45, 45, 51, 0.24);
+  &.mt-button--shadow {
+    border: none;
+    box-shadow: var(--mt-elevations-s);
+
+    &:hover,
+    &:focus {
+      box-shadow: var(--mt-elevations-m);
+    }
   }
 }

@@ -16,7 +16,7 @@ useDefaultProps<IconProps>({
 export default function Icon(props: IconProps) {
   return (
     <span
-      class={cls("mt-icon", "icon-" + props.name, {
+      class={cls("mt-icon", "icon-" + props.name, props.nativeClass, {
         "mt-icon--size-s": props.size === "s",
         "mt-icon--size-m": props.size === "m",
         "mt-icon--size-l": props.size === "l",

@@ -12,19 +12,19 @@
   "Weight": {
     "Light": {
       "$type": "string",
-      "$value": "Light"
+      "$value": "300"
     },
     "Regular": {
       "$type": "string",
-      "$value": "Regular"
+      "$value": "400"
     },
     "Semibold": {
       "$type": "string",
-      "$value": "Semibold"
+      "$value": "600"
     },
     "Bold": {
       "$type": "string",
-      "$value": "Bold"
+      "$value": "700"
     }
   },
   "Line-height": {
