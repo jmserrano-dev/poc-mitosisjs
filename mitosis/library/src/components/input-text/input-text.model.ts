@@ -4,6 +4,7 @@ const InputSizeList = ["xs", "s", "m"] as const;
 export type InputProps = {
   type?: (typeof InputTypeList)[number];
   size?: (typeof InputSizeList)[number];
+  value?: string;
   shadow?: boolean;
   invalid?: boolean;
   nativeDisabled?: boolean;

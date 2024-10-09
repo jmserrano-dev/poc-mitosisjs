@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Input } from "../index";
+import { InputText } from "../index";
 
 const meta = {
-  title: "Components/Input",
+  title: "Components/InputText",
   tags: ["autodocs"],
-  component: Input,
+  component: InputText,
   parameters: {
     layout: "centered",
   },
@@ -13,7 +13,7 @@ const meta = {
     nativePlaceholder: "Write something...",
     // xClick: fn(),
   },
-} as Meta<typeof Input>;
+} as Meta<typeof InputText>;
 
 export default meta;
 

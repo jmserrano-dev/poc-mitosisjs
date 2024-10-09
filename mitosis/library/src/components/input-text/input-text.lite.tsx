@@ -1,13 +1,12 @@
 import { useDefaultProps, useMetadata } from "@builder.io/mitosis";
 
-import { InputProps } from "./input.model";
+import { InputProps } from "./input-text.model";
 import { cls } from "../../utils/styles";
-import Icon from "../icon/icon.lite";
+import AcmeIcon from "../icon/icon.lite";
 
 useMetadata({
-  importCSS: "./input.css",
+  importCSS: "./input-text.css",
   isAttachedToShadowDom: true,
-  angular: { selector: "x-input" },
 });
 
 useDefaultProps<InputProps>({
@@ -18,10 +17,11 @@ useDefaultProps<InputProps>({
   size: "m",
 });
 
-export default function Input(props: InputProps) {
+export default function AcmeInputText(props: InputProps) {
   return (
     <div class="mt-input">
       <input
+        value={props.value}
         disabled={props.nativeDisabled}
         placeholder={props.nativePlaceholder}
         class={cls("mt-input__field", {
@@ -32,7 +32,7 @@ export default function Input(props: InputProps) {
           "mt-input__field--size-m": props.size === "m",
         })}
       />
-      <Icon nativeClass="mt-input__icon" name="close-sm" size="m" />
+      <AcmeIcon nativeClass="mt-input__icon" name="close-sm" size="m" />
     </div>
   );
 }

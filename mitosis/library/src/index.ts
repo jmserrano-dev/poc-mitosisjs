@@ -6,7 +6,7 @@ export { default as Icon } from "./components/icon/icon.lite";
 export { default as Button } from "./components/button/button.lite";
 
 export { default as Label } from "./components/label/label.lite";
-export { default as Input } from "./components/input/input.lite";
+export { default as InputText } from "./components/input-text/input-text.lite";
 export { default as Validation } from "./components/validation/validation.lite";
 
 export { default as BoxLayout } from "./components/box-layout/box-layout.lite";

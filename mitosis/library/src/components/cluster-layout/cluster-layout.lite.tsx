@@ -6,7 +6,6 @@ import { cls, toPx } from "../../utils/styles";
 useMetadata({
   importCSS: "./cluster-layout.css",
   isAttachedToShadowDom: true,
-  angular: { selector: "x-cluster-layout" },
 });
 
 useDefaultProps<ClusterLayoutProps>({
@@ -14,7 +13,7 @@ useDefaultProps<ClusterLayoutProps>({
   spacing: 8,
 });
 
-export default function ClusterLayout(props: ClusterLayoutProps) {
+export default function AcmeClusterLayout(props: ClusterLayoutProps) {
   return (
     <div
       class={cls("mt-cluster-layout", props.nativeClass)}

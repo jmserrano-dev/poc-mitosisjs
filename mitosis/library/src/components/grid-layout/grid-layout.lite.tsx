@@ -6,7 +6,6 @@ import { cls, toPx } from "../../utils/styles";
 useMetadata({
   importCSS: "./grid-layout.css",
   isAttachedToShadowDom: true,
-  angular: { selector: "x-grid-layout" },
 });
 
 useDefaultProps<GridLayoutProps>({
@@ -14,7 +13,7 @@ useDefaultProps<GridLayoutProps>({
   spacing: 8,
 });
 
-export default function GridLayout(props: GridLayoutProps) {
+export default function AcmeGridLayout(props: GridLayoutProps) {
   return (
     <div
       class={cls("mt-grid-layout", props.nativeClass)}

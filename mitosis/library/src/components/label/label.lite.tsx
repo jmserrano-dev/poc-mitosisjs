@@ -6,10 +6,9 @@ import { cls } from "../../utils/styles";
 useMetadata({
   importCSS: "./label.css",
   isAttachedToShadowDom: true,
-  angular: { selector: "x-label" },
 });
 
-export default function Label(props: LabelProps) {
+export default function AcmeLabel(props: LabelProps) {
   return (
     <label for={props.nativeFor} class={cls("mt-label")}>
       {props.children}

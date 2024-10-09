@@ -16,6 +16,6 @@ export default meta;
 
 export const Primary: StoryObj<typeof meta> = {
   args: {
-    name: "arrow_down",
+    name: "arrow-down",
   },
 };

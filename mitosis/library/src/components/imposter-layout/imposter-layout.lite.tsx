@@ -6,7 +6,6 @@ import { cls, toPx } from "../../utils/styles";
 useMetadata({
   importCSS: "./imposter-layout.css",
   isAttachedToShadowDom: true,
-  angular: { selector: "x-imposter-layout" },
 });
 
 useDefaultProps<ImposterLayoutProps>({
@@ -14,7 +13,7 @@ useDefaultProps<ImposterLayoutProps>({
   variant: "center",
 });
 
-export default function ImposterLayout(props: ImposterLayoutProps) {
+export default function AcmeImposterLayout(props: ImposterLayoutProps) {
   return (
     <div
       class={cls("mt-imposter-layout", props.nativeClass, {

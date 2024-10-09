@@ -6,14 +6,13 @@ import { cls, toPx } from "../../utils/styles";
 useMetadata({
   importCSS: "./box-layout.css",
   isAttachedToShadowDom: true,
-  angular: { selector: "x-box-layout" },
 });
 
 useDefaultProps<BoxLayoutProps>({
   spacing: 8,
 });
 
-export default function BoxLayout(props: BoxLayoutProps) {
+export default function AcmeBoxLayout(props: BoxLayoutProps) {
   return (
     <div
       class={cls("mt-box-layout", props.nativeClass)}

@@ -6,14 +6,13 @@ import { cls, toPx } from "../../utils/styles";
 useMetadata({
   importCSS: "./stack-layout.css",
   isAttachedToShadowDom: true,
-  angular: { selector: "x-stack-layout" },
 });
 
 useDefaultProps<StackLayoutProps>({
   spacing: 8,
 });
 
-export default function StackLayout(props: StackLayoutProps) {
+export default function AcmeStackLayout(props: StackLayoutProps) {
   return (
     <div
       class={cls("mt-stack-layout", props.nativeClass)}

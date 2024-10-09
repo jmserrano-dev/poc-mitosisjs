@@ -6,14 +6,13 @@ import { cls } from "../../utils/styles";
 useMetadata({
   importCSS: "./icon.css",
   isAttachedToShadowDom: true,
-  angular: { selector: "x-icon" },
 });
 
 useDefaultProps<IconProps>({
   size: "s",
 });
 
-export default function Icon(props: IconProps) {
+export default function AcmeIcon(props: IconProps) {
   return (
     <span
       class={cls("mt-icon", "icon-" + props.name, props.nativeClass, {

@@ -6,7 +6,6 @@ import { cls } from "../../utils/styles";
 useMetadata({
   importCSS: "./button.css",
   isAttachedToShadowDom: true,
-  angular: { selector: "x-button" },
 });
 
 useDefaultProps<ButtonProps>({
@@ -17,7 +16,7 @@ useDefaultProps<ButtonProps>({
   size: "m",
 });
 
-export default function Button(props: ButtonProps) {
+export default function AcmeButton(props: ButtonProps) {
   // const state = useStore<ButtonState>({
   //   handleClick: () => {
   //     if (props.xClick) props.xClick();
