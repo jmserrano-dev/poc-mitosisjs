@@ -7,6 +7,7 @@ export type InputProps = {
   value?: string;
   shadow?: boolean;
   invalid?: boolean;
+  maxLength?: number;
   nativeDisabled?: boolean;
   nativePlaceholder?: string;
 };

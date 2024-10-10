@@ -13,4 +13,5 @@ export type IconProps = {
   name?: (typeof IconNameList)[number];
   size?: (typeof IconSizeList)[number];
   nativeClass?: string;
+  nativeClick?: () => void;
 };

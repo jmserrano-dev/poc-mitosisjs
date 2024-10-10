@@ -1,4 +1,10 @@
-import { useDefaultProps, useMetadata } from "@builder.io/mitosis";
+import {
+  onMount,
+  Show,
+  useDefaultProps,
+  useMetadata,
+  useStore,
+} from "@builder.io/mitosis";
 
 import { InputProps } from "./input-text.model";
 import { cls } from "../../utils/styles";
@@ -18,10 +24,28 @@ useDefaultProps<InputProps>({
 });
 
 export default function AcmeInputText(props: InputProps) {
+  const state = useStore({
+    text: "",
+    get numberOfCharacters() {
+      return state.text.length;
+    },
+    clear() {
+      state.text = "";
+    },
+    update(event: any) {
+      state.text = event.target.value;
+    },
+  });
+
+  onMount(() => {
+    state.text = props.value;
+  });
+
   return (
     <div class="mt-input">
       <input
-        value={props.value}
+        value={state.text}
+        maxLength={props.maxLength}
         disabled={props.nativeDisabled}
         placeholder={props.nativePlaceholder}
         class={cls("mt-input__field", {
@@ -31,8 +55,21 @@ export default function AcmeInputText(props: InputProps) {
           "mt-input__field--size-s": props.size === "s",
           "mt-input__field--size-m": props.size === "m",
         })}
+        onInput={(event) => state.update(event)}
       />
-      <AcmeIcon nativeClass="mt-input__icon" name="close-sm" size="m" />
+      <AcmeIcon
+        size="m"
+        name="close-sm"
+        nativeClass="mt-input__icon"
+        nativeClick={state.clear}
+      />
+
+      {/* TODO: jserrano - Extract to other component */}
+      <Show when={props.maxLength}>
+        <span class="mt-input__counter">
+          {state.numberOfCharacters}/{props.maxLength}
+        </span>
+      </Show>
     </div>
   );
 }

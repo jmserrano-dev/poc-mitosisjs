@@ -11,6 +11,15 @@
     color: var(--mt-color-button-ghost-icon-button-ghost-icon-default);
   }
 
+  & .mt-input__counter {
+    position: absolute;
+    bottom: -18px;
+    right: 0;
+
+    color: var(--mt-text-dark-soft, #737377);
+    font: normal normal var(--mt-bodytext-xs-regular);
+  }
+
   & .mt-input__field {
     padding: var(--mt-spacing-spacing-none) var(--mt-spacing-spacing-5)
       var(--mt-spacing-spacing-none) var(--mt-spacing-spacing-3);

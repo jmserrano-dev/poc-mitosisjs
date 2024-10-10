@@ -20,6 +20,7 @@ export default function AcmeIcon(props: IconProps) {
         "mt-icon--size-m": props.size === "m",
         "mt-icon--size-l": props.size === "l",
       })}
+      onClick={() => props.nativeClick?.()}
     ></span>
   );
 }
