@@ -2,7 +2,12 @@
   "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
   "files": {
     "include": ["**/*.ts", "**/*.html", "**/*.scss", "**/*.css"],
-    "ignore": ["node_modules", "**/dist/**", "**/.angular/**", "**/auto-generated/**"]
+    "ignore": [
+      "node_modules",
+      "**/dist/**",
+      "**/.angular/**",
+      "**/auto-generated/**"
+    ]
   },
   "organizeImports": {
     "enabled": true

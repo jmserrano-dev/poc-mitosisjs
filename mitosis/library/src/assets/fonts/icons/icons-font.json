@@ -1,8 +1,10 @@
 {
     "alert-circle": 61697,
-    "arrow-down": 61698,
-    "arrow-left": 61699,
-    "arrow-right": 61700,
-    "arrow-up": 61701,
-    "close-sm": 61702
+    "alert-triangle": 61698,
+    "arrow-down": 61699,
+    "arrow-left": 61700,
+    "arrow-right": 61701,
+    "arrow-up": 61702,
+    "close-sm": 61703,
+    "search": 61704
 }

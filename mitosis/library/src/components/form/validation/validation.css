@@ -4,7 +4,21 @@
   align-items: center;
   gap: 4px;
 
-  color: var(--mt-color-text-error, #ee4614);
+  &.mt-validation--default {
+    color: var(--mt-color-text-dark-soft);
+  }
+
+  &.mt-validation--error {
+    color: var(--mt-color-status-alert);
+  }
+
+  &.mt-validation--warning {
+    color: var(--mt-color-status-warning-2);
+
+    & .mt-validation__message {
+      color: var(--mt-color-text-dark-soft);
+    }
+  }
 
   & .mt-validation__message {
     font: normal normal var(--mt-bodytext-xs-regular);

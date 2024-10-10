@@ -10,7 +10,7 @@ const meta: Meta<typeof Validation> = {
     layout: "centered",
   },
   args: {},
-};
+} as Meta<typeof Validation>;
 
 export default meta;
 

@@ -1,4 +1,4 @@
-const InputTypeList = ["input", "search", "textarea"] as const;
+const InputTypeList = ["input", "search"] as const;
 const InputSizeList = ["xs", "s", "m"] as const;
 
 export type InputProps = {
@@ -10,4 +10,5 @@ export type InputProps = {
   maxLength?: number;
   nativeDisabled?: boolean;
   nativePlaceholder?: string;
+  chidren?: any;
 };

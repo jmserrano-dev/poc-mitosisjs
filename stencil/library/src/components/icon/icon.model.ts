@@ -1,4 +1,13 @@
-export const IconNameList = ["arrow_down", "arrow_left", "arrow_right", "arrow_up"] as const;
+export const IconNameList = [
+  "alert-circle",
+  "alert-triangle",
+  "arrow-down",
+  "arrow-left",
+  "arrow-right",
+  "arrow-up",
+  "close-sm",
+  "search",
+] as const;
 export const IconSizeList = ["s", "m", "l"] as const;
 
 export type IconProps = {

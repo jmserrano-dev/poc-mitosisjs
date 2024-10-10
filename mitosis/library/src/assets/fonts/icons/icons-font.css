@@ -1,7 +1,7 @@
 @font-face {
   font-display: block;
   font-family: "icons-font";
-  src: url("./icons-font.ttf?dcf71aba37a3a7cebfd67d58ad90b8f9") format("truetype");
+  src: url("./icons-font.ttf?020ca0fae04a6b637d0ab0fed30736e3") format("truetype");
 }
 
 span[class^="icon-"]::before, span[class*=" icon-"]::before {
@@ -18,18 +18,24 @@ span[class^="icon-"]::before, span[class*=" icon-"]::before {
 .icon-alert-circle::before {
   content: "\f101";
 }
-.icon-arrow-down::before {
+.icon-alert-triangle::before {
   content: "\f102";
 }
-.icon-arrow-left::before {
+.icon-arrow-down::before {
   content: "\f103";
 }
-.icon-arrow-right::before {
+.icon-arrow-left::before {
   content: "\f104";
 }
-.icon-arrow-up::before {
+.icon-arrow-right::before {
   content: "\f105";
 }
-.icon-close-sm::before {
+.icon-arrow-up::before {
   content: "\f106";
+}
+.icon-close-sm::before {
+  content: "\f107";
+}
+.icon-search::before {
+  content: "\f108";
 }

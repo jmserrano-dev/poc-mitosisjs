@@ -1,0 +1,6 @@
+.mt-input-counter {
+  margin-left: auto;
+
+  color: var(--mt-text-dark-soft);
+  font: normal normal var(--mt-bodytext-xs-regular);
+}

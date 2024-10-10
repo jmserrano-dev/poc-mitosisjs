@@ -10,6 +10,7 @@ useMetadata({
 
 useDefaultProps<ClusterLayoutProps>({
   justify: "start",
+  wrap: "wrap",
   spacing: 8,
 });
 
@@ -19,7 +20,8 @@ export default function AcmeClusterLayout(props: ClusterLayoutProps) {
       class={cls("mt-cluster-layout", props.nativeClass)}
       style={{
         "--mt-cluster-layout-spacing": toPx(props.spacing),
-        "--mt-cluster-layout-justify": props.justify,
+        "--mt-cluster-layout-justify": props.justify!,
+        "--mt-cluster-layout-wrap": props.wrap!,
       }}
     >
       {props.children}
